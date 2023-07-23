@@ -1,7 +1,10 @@
 import type OAuth2Strategy from "passport-oauth2";
 import type { StrategyOptions } from "passport-oauth2";
 
-export interface Pr0grammStrategyOptions extends StrategyOptions {
+export interface Pr0grammStrategyOptions extends Partial<StrategyOptions> {
+	clientID: string;
+	clientSecret: string;
+	callbackURL: string;
 	authorizationURL?: string;
 	tokenURL?: string;
 	userProfileURL?: string;
