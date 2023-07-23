@@ -55,10 +55,10 @@ passport.use(
 	),
 );
 
-var app = express();
+const app = express();
 
 // configure Express
-app.set("views", __dirname + "/views");
+app.set("views", `${__dirname}/views`);
 app.set("view engine", "ejs");
 app.use(morgan("combined"));
 app.use(cookieParser());
@@ -79,7 +79,7 @@ app.use(
 // persistent login sessions (recommended).
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(`${__dirname}/public`));
 
 app.get("/", function (req, res) {
 	res.render("index", { user: req.user });
