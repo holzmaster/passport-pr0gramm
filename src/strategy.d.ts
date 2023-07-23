@@ -52,6 +52,12 @@ import type OAuth2Strategy from "passport-oauth2";
  * ));
  * ```
  */
-declare class Strategy extends OAuth2Strategy {}
+declare class Strategy extends OAuth2Strategy {
+	/**
+	 * @param {Pr0grammStrategyOptions} options
+	 * @param {(accessToken: string, refreshToken: string | null, profile: Pr0grammProfile, done: Function) => void} verify
+	 */
+	constructor(options, verify);
+}
 
 export default Strategy;
