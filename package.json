@@ -1,0 +1,36 @@
+{
+  "name": "passport-pr0gramm",
+  "version": "0.1.0",
+  "description": "pr0gramm authentication strategy for Passport.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "ci": "rome ci ./",
+    "format": "rome format --write ./",
+    "lint": "rome check ./",
+    "lint:fix": "rome check --apply ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holzmaster/passport-pr0gramm.git"
+  },
+  "keywords": [
+    "passport",
+    "pr0gramm",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ],
+  "author": "holzmaster <holzmaster@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "passport-oauth2": "^1.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "rome": "^12.1.3"
+  }
+}

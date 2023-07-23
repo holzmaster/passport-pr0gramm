@@ -1,0 +1,7 @@
+.editorconfig
+.gitignore
+*.js.map
+*.log
+*.json
+.github/
+.vscode/

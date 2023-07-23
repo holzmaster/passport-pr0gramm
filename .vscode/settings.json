@@ -1,0 +1,16 @@
+{
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"tsconfig.json": "tsconfig.*.json",
+		"package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc",
+		"*.ts": "$(capture).test.ts"
+	},
+	"cSpell.language": "en,de",
+	"editor.formatOnSaveMode": "modificationsIfAvailable",
+	"[javascript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "rome.rome"
+	}
+}
