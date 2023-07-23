@@ -36,19 +36,19 @@ passport.use(new Pr0grammStrategy({
 ```
 
 #### Authenticate Requests
-Use `passport.authenticate()`, specifying the `'pr0gramm'` strategy, to authenticate requests.
+Use `passport.authenticate()`, specifying the `"pr0gramm"` strategy, to authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com) application:
 
 ```javascript
-app.get('/auth/pr0gramm', function(req, res, next){
-  passport.authenticate('pr0gramm')(req, res, next);
+app.get("/auth/pr0gramm", function(req, res, next){
+  passport.authenticate("pr0gramm")(req, res, next);
 });
 
-app.get('/auth/pr0gramm/callback', function(req, res, next){
-  passport.authenticate('pr0gramm', {
-    successRedirect: '/',
-    failureRedirect: '/login'
+app.get("/auth/pr0gramm/callback", function(req, res, next){
+  passport.authenticate("pr0gramm", {
+    successRedirect: "/",
+    failureRedirect: "/login"
   })(req, res, next);
 });
 ```
