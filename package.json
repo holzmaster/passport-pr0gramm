@@ -1,6 +1,6 @@
 {
   "name": "passport-pr0gramm",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "pr0gramm authentication strategy for Passport.",
   "main": "src/index.js",
   "type": "module",
