@@ -1,25 +1,22 @@
 import type OAuth2Strategy from "passport-oauth2";
+import type { StrategyOptions } from "passport-oauth2";
 
-/**
- * @typedef {import("passport-oauth2").StrategyOptions & {
- *   authorizationURL?: string;
- *   tokenURL?: string;
- *   userProfileURL?: string;
- * }} Pr0grammStrategyOptions
- */
+export interface Pr0grammStrategyOptions extends StrategyOptions {
+	authorizationURL?: string;
+	tokenURL?: string;
+	userProfileURL?: string;
+}
 
-/**
- * @typedef {{
- *   provider: "pr0gramm";
- *   name: string;
- *   id: string;
- *   registered: number;
- *   mark: number;
- *   score: number;
- *   _raw: string;
- *   _json: unknown;
- * }} Pr0grammProfile
- */
+export interface Pr0grammProfile {
+	provider: "pr0gramm";
+	name: string;
+	id: string;
+	registered: number;
+	mark: number;
+	score: number;
+	_raw: string;
+	_json: unknown;
+}
 
 /**
  * `Strategy` constructor.
@@ -53,11 +50,15 @@ import type OAuth2Strategy from "passport-oauth2";
  * ```
  */
 declare class Strategy extends OAuth2Strategy {
-	/**
-	 * @param {Pr0grammStrategyOptions} options
-	 * @param {(accessToken: string, refreshToken: string | null, profile: Pr0grammProfile, done: Function) => void} verify
-	 */
-	constructor(options, verify);
+	constructor(
+		options: Pr0grammStrategyOptions,
+		verify: (
+			accessToken: string,
+			refreshToken: string | null,
+			profile: Pr0grammProfile,
+			done: Function,
+		) => void,
+	);
 }
 
 export default Strategy;
