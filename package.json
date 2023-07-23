@@ -4,6 +4,7 @@
   "description": "pr0gramm authentication strategy for Passport.",
   "main": "src/index.js",
   "type": "module",
+  "types": "src/index.d.ts",
   "scripts": {
     "ci": "rome ci ./",
     "format": "rome format --write ./",
