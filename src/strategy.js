@@ -78,8 +78,7 @@ export default class Strategy extends OAuth2Strategy {
 
 		super(opts, verify);
 
-		this._userProfileURL =
-			opts.userProfileURL ?? "https://pr0gramm.com/api/user/me";
+		this._userProfileURL = opts.userProfileURL ?? "https://pr0gramm.com/api/user/me";
 
 		// Needed because the fetching of the user profile is done via GET
 		// @ts-ignore
@@ -120,15 +119,11 @@ export default class Strategy extends OAuth2Strategy {
 	userProfile(accessToken, done) {
 		this._oauth2.get(this._userProfileURL, accessToken, (err, body) => {
 			if (err) {
-				return done(
-					new InternalOAuthError("Failed to fetch user profile.", err),
-				);
+				return done(new InternalOAuthError("Failed to fetch user profile.", err));
 			}
 
 			if (body === undefined) {
-				return done(
-					new InternalOAuthError("Failed to fetch user profile.", null),
-				);
+				return done(new InternalOAuthError("Failed to fetch user profile.", null));
 			}
 
 			const bodyStr = body instanceof Buffer ? body.toString("utf8") : body;

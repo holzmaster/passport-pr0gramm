@@ -6,10 +6,10 @@
   "type": "module",
   "types": "src/index.d.ts",
   "scripts": {
-    "ci": "rome ci ./",
-    "format": "rome format --write ./",
-    "lint": "rome check ./",
-    "lint:fix": "rome check --apply ./"
+    "ci": "biome ci ./src",
+    "format": "biome format --write ./src",
+    "lint": "biome check ./src",
+    "lint:fix": "biome check --apply ./src"
   },
   "repository": {
     "type": "git",
@@ -26,12 +26,12 @@
   "author": "holzmaster <holzmaster@outlook.com>",
   "license": "ISC",
   "dependencies": {
-    "passport-oauth2": "^1.7.0"
+    "passport-oauth2": "^1.8.0"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
-    "rome": "^12.1.3"
+    "@biomejs/biome": "^1.7.2"
   }
 }
