@@ -59,6 +59,7 @@ declare class Strategy extends OAuth2Strategy {
 			accessToken: string,
 			refreshToken: string | null,
 			profile: Pr0grammProfile,
+			// biome-ignore lint/complexity/noBannedTypes: :shrug:
 			done: Function,
 		) => void,
 	);
