@@ -1,3 +1,6 @@
+# Archiviert am 2025-03-29
+benutz was anderes
+
 # passport-pr0gramm [![CI](https://github.com/holzmaster/passport-pr0gramm/actions/workflows/CI.yaml/badge.svg)](https://github.com/holzmaster/passport-pr0gramm/actions/workflows/CI.yaml)
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
 with [pr0gramm](http://pr0gramm.com) using the OAuth 2.0 API.
